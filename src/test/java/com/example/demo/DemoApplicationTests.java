@@ -6,14 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest
-//@AutoConfigureTestDatabase
 public class DemoApplicationTests {
-
-	@Test
-	public void contextLoads() {
-	}
 
 	@Test
 	void verifyModularity() throws IOException {
@@ -25,9 +18,8 @@ public class DemoApplicationTests {
 		// Generate documentation
 		Documenter documenter = new Documenter(modules);
 
-		Documenter.Options options = Documenter.Options.defaults();
-//		Documenter.Options options = Documenter.Options.defaults() //
-//				.withExclusions(module -> module.getName().matches(".*core|.*support"));
+		Documenter.Options options = Documenter.Options.defaults() //
+				.withExclusions(module -> module.getName().matches(".*core|.*support"));
 
 		// Write overall diagram
 		documenter.writeModulesAsPlantUml(options);

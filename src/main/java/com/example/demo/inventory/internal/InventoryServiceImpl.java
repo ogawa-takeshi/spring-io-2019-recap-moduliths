@@ -1,8 +1,21 @@
 package com.example.demo.inventory.internal;
 
+import com.example.demo.catalog.ProductRepository;
 import com.example.demo.inventory.InventoryService;
-import org.springframework.stereotype.Service;
+import com.example.demo.order.Order;
+import lombok.RequiredArgsConstructor;
+import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Component;
 
-@Service
-public class InventoryServiceImpl implements InventoryService {
+@Component
+@RequiredArgsConstructor
+class InventoryServiceImpl implements InventoryService {
+
+	private final ProductRepository productRepository;
+
+	@EventListener
+	public void on(Order.OrderCompleted event) {
+		// do something...
+	}
+
 }

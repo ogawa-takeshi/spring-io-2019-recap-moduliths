@@ -1,9 +1,9 @@
 package com.example.demo.order.internal;
 
-import com.example.demo.complex.spi.SpiComponent;
-import com.example.demo.inventory.StockRepository;
-import com.example.demo.order.OrderService;
+import com.example.demo.catalog.ProductRepository;
+import com.example.demo.order.Order;
 import com.example.demo.order.OrderRepository;
+import com.example.demo.order.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +13,14 @@ class OrderServiceImpl implements OrderService {
 
 	private final OrderRepository orderRepository;
 
-	private final StockRepository stockRepository;
+	private final ProductRepository productRepository;
 
-	private SpiComponent spiComponent;
+//	private final StockRepository stockRepository;
 
-//	private final InventoryService inventoryService;
+//	private SpiComponent spiComponent;
 
 	@Override
-	public void completeOrder() {
-		spiComponent.test();
-		// do something
+	public void completeOrder(Order order) {
+		this.orderRepository.save(order.complete());
 	}
 }

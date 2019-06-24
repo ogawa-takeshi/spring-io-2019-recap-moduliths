@@ -11,3 +11,5 @@ plantuml::{generated-docs}/moduliths/components.uml[,,svg,title="Example compone
 plantuml::{generated-docs}/moduliths/module-catalog.uml[,,svg,title="Catalog module component overview"]
 
 plantuml::{generated-docs}/moduliths/module-order.uml[,,svg,title="Order module component overview"]
+
+plantuml::{generated-docs}/moduliths/module-inventory.uml[,,svg,title="Inventory6 module component overview"]

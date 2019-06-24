@@ -1,6 +1,5 @@
-package com.example.demo.catalog.repository;
+package com.example.demo.catalog;
 
-import com.example.demo.catalog.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

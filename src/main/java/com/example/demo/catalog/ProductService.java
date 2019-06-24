@@ -1,10 +1,5 @@
 package com.example.demo.catalog;
 
-import com.example.demo.order.OrderService;
+public interface ProductService {
 
-public class ProductService {
-
-	public ProductService(OrderService orderService) {
-
-	}
 }

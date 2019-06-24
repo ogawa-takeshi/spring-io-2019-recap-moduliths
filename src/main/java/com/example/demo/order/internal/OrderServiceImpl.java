@@ -15,12 +15,9 @@ class OrderServiceImpl implements OrderService {
 
 	private final ProductRepository productRepository;
 
-//	private final StockRepository stockRepository;
-
-//	private SpiComponent spiComponent;
-
 	@Override
 	public void completeOrder(Order order) {
+//		new PrivateSample();
 		this.orderRepository.save(order.complete());
 	}
 }
